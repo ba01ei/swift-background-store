@@ -1,4 +1,4 @@
-// swift-tools-version: 5.9
+// swift-tools-version: 6.0
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -6,9 +6,9 @@ import PackageDescription
 let package = Package(
     name: "swift-background-store",
     platforms: [
-      .iOS(.v13),
+      .iOS(.v14),
       .macOS(.v10_15),
-      .tvOS(.v13),
+      .tvOS(.v14),
       .watchOS(.v6),
     ],
     products: [
@@ -25,5 +25,6 @@ let package = Package(
             name: "BackgroundStoreTests",
             dependencies: ["BackgroundStore"]
         ),
-    ]
+    ],
+    swiftLanguageModes: [.v6]
 )
